@@ -18,6 +18,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v1
+      - uses: microsoft/setup-msbuild@v1
       - name: Configure
         run: cmake -B build ; cd build ; MSBuild /nologo /t:ALL_BUILD:Build ToyRobot.sln
       - name: Test
