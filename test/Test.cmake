@@ -31,6 +31,7 @@ target_compile_options(test
         -fPIC
         -std=c++14
         -Wall
+        -g
         ${werrorflag}
 )
 

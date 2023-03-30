@@ -24,6 +24,7 @@ target_compile_options(execute
     PRIVATE
         -std=c++14
         -Wall
+        -g
         ${werrorflag}
 )
 

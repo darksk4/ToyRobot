@@ -19,6 +19,7 @@ target_compile_options(robot
     PRIVATE
         -std=c++14
         -Wall
+        -g
         ${werrorflag}
 )
 

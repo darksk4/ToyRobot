@@ -18,6 +18,7 @@ target_compile_options(face
     PRIVATE
         -std=c++14
         -Wall
+        -g
         ${werrorflag}
 )
 
