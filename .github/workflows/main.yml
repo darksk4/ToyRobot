@@ -19,6 +19,6 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Configure
-        run: cmake -B build -G "NMake Makefiles" ; cd build ; nmake
+        run: cmake -B build -G "NMake Makefiles" ; cd build ; make
       - name: Test
         run: D:/a/ToyRobot/ToyRobot/build/test   
