@@ -25,13 +25,14 @@ target_link_libraries(test
         face
         robot
         ${msvr}
+        ${msvrd}
+        ${libcmt}
 )
 
 target_compile_options(test
     PRIVATE
         -fPIC
         -std=c++14
-        -g
         -Wall
         ${werrorflag}
 )

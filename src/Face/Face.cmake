@@ -17,7 +17,9 @@ target_include_directories(face
 target_compile_options(face
     PRIVATE
         -std=c++14
-        -g
         -Wall
         ${werrorflag}
+        ${msvr}
+        ${msvrd}
+        ${libcmt}
 )

@@ -1,7 +1,9 @@
 cmake_minimum_required(VERSION 3.8)
 
 if (WIN32)
-    set(msvr /NODEFAULTLIB:MSVCRT)
+    set(msvr /NODEFAULTLIB:msvcrt)
+    set(msvrd /NODEFAULTLIB:msvcrtd)
+    set(libcmt /NODEFAULTLIB:libcmt)
     set(msvr "")
     set(werrorflag "")
 else()
@@ -25,7 +27,6 @@ target_include_directories(execute
 target_compile_options(execute
     PRIVATE
         -std=c++14
-        -g
         -Wall
         ${werrorflag}
 )
@@ -35,4 +36,6 @@ target_link_libraries(execute
         face
         robot
         ${msvr}
+        ${msvrd}
+        ${libcmt}
 )

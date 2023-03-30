@@ -18,7 +18,6 @@ target_include_directories(robot
 target_compile_options(robot
     PRIVATE
         -std=c++14
-        -g
         -Wall
         ${werrorflag}
 )
@@ -27,4 +26,6 @@ target_link_libraries(robot
     PRIVATE
         face
         ${msvr}
+        ${msvrd}
+        ${libcmt}
 )
