@@ -40,10 +40,6 @@ target_link_options(test
     PRIVATE
         /NODEFAULTLIB:msvcrt
         /NODEFAULTLIB:libcmt
-        /NODEFAULTLIB:libcmt.lib
-        /NODEFAULTLIB:msvcrt.lib
-        /NODEFAULTLIB:libcd.lib
-        /NODEFAULTLIB:libcmtd.lib
-        /NODEFAULTLIB:msvcrtd.lib
+        /MTd
 )
 endif()
