@@ -8,7 +8,6 @@ file (GLOB ActualTests
     ${CMAKE_CURRENT_SOURCE_DIR}/test/tests/RobotTest.cpp
 )
 
-
 add_executable(test ${ActualTests})
 
 add_dependencies(test execute)
@@ -25,6 +24,7 @@ target_link_libraries(test
         gtest
         face
         robot
+        ${msvr}
 )
 
 target_compile_options(test
@@ -33,5 +33,5 @@ target_compile_options(test
         -std=c++14
         -g
         -Wall
-        #        -Werror errors in the compilation
+        ${werrorflag}
 )

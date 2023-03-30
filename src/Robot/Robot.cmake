@@ -20,10 +20,11 @@ target_compile_options(robot
         -std=c++14
         -g
         -Wall
-        #        -Werror errors in the compilation
+        ${werrorflag}
 )
 
 target_link_libraries(robot
     PRIVATE
         face
+        ${msvr}
 )

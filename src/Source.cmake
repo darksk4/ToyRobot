@@ -1,5 +1,12 @@
 cmake_minimum_required(VERSION 3.8)
 
+if (WINDOWS)
+    set(msvr /NODEFAULTLIB:MSVCRT)
+    set(werrorflag "")
+else()
+    set(msvr "")
+    set(werrorflag -Werror)
+endif()
 
 include(${CMAKE_CURRENT_SOURCE_DIR}/src/Face/Face.cmake)
 include(${CMAKE_CURRENT_SOURCE_DIR}/src/Robot/Robot.cmake)
@@ -19,11 +26,12 @@ target_compile_options(execute
         -std=c++14
         -g
         -Wall
-        #        -Werror errors in the compilation
+        ${werrorflag}
 )
 
 target_link_libraries(execute
     PRIVATE
         face
         robot
+        ${msvr}
 )
