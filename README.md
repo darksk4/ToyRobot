@@ -20,7 +20,7 @@ The toy robot must not fall off the table during movement. This also includes th
 
 # Build
 
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)]()
+[![C/C++ CI](https://github.com/darksk4/ToyRobot/actions/workflows/main.yml/badge.svg)](https://github.com/darksk4/ToyRobot/actions/workflows/main.yml)
 
 Clone and go to the folder.
 
