@@ -1,15 +1,11 @@
 cmake_minimum_required(VERSION 3.8)
 
 if (WIN32)
-    set(msvr /NODEFAULTLIB:msvcrt)
-    set(msvrd /NODEFAULTLIB:msvcrtd)
-    set(libcmt /NODEFAULTLIB:libcmt)
-    set(msvr "")
     set(werrorflag "")
 else()
-    set(msvr "")
     set(werrorflag -Werror)
 endif()
+
 
 include(${CMAKE_CURRENT_SOURCE_DIR}/src/Face/Face.cmake)
 include(${CMAKE_CURRENT_SOURCE_DIR}/src/Robot/Robot.cmake)
@@ -35,7 +31,15 @@ target_link_libraries(execute
     PRIVATE
         face
         robot
-        ${msvr}
-        ${msvrd}
-        ${libcmt}
 )
+
+
+if (WIN32)
+
+target_link_options(execute
+    PRIVATE
+        /NODEFAULTLIB:msvcrt
+        /NODEFAULTLIB:msvcrtd
+        /NODEFAULTLIB:libcmt
+)
+endif()

@@ -24,9 +24,6 @@ target_link_libraries(test
         gtest
         face
         robot
-        ${msvr}
-        ${msvrd}
-        ${libcmt}
 )
 
 target_compile_options(test
@@ -36,3 +33,12 @@ target_compile_options(test
         -Wall
         ${werrorflag}
 )
+
+if (WIN32)
+target_link_options(test
+    PRIVATE
+        /NODEFAULTLIB:msvcrt
+        /NODEFAULTLIB:msvcrtd
+        /NODEFAULTLIB:libcmt
+)
+endif()

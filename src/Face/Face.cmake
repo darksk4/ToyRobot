@@ -19,7 +19,13 @@ target_compile_options(face
         -std=c++14
         -Wall
         ${werrorflag}
-        ${msvr}
-        ${msvrd}
-        ${libcmt}
 )
+
+if (WIN32)
+target_link_options(face
+    PRIVATE
+        /NODEFAULTLIB:msvcrt
+        /NODEFAULTLIB:msvcrtd
+        /NODEFAULTLIB:libcmt
+)
+endif()

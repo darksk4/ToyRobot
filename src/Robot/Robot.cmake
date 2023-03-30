@@ -25,7 +25,13 @@ target_compile_options(robot
 target_link_libraries(robot
     PRIVATE
         face
-        ${msvr}
-        ${msvrd}
-        ${libcmt}
 )
+
+if (WIN32)
+target_link_options(robot
+    PRIVATE
+        /NODEFAULTLIB:msvcrt
+        /NODEFAULTLIB:msvcrtd
+        /NODEFAULTLIB:libcmt
+)
+endif()
