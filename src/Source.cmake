@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.8)
 
-if (WINDOWS)
+if (WIN32)
     set(msvr /NODEFAULTLIB:MSVCRT)
     set(werrorflag "")
 else()
