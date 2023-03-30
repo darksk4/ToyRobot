@@ -8,9 +8,9 @@ file (GLOB ActualTests
     ${CMAKE_CURRENT_SOURCE_DIR}/test/tests/RobotTest.cpp
 )
 
-add_dependencies(test execute)
-
 add_executable(test ${ActualTests})
+
+add_dependencies(test execute)
 
 
 target_include_directories(test
@@ -38,11 +38,12 @@ target_compile_options(test
 if (WIN32)
 target_link_options(test
     PRIVATE
-        /NODEFAULTLIB:msvcrt.lib
-        /NODEFAULTLIB:msvcrtd.lib
+        /NODEFAULTLIB:msvcrt
+        /NODEFAULTLIB:libcmt
         /NODEFAULTLIB:libcmt.lib
-        /NODEFAULTLIB:libcmt.lib 
+        /NODEFAULTLIB:msvcrt.lib
         /NODEFAULTLIB:libcd.lib
         /NODEFAULTLIB:libcmtd.lib
+        /NODEFAULTLIB:msvcrtd.lib
 )
 endif()
