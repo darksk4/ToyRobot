@@ -25,7 +25,6 @@ if (WIN32)
 target_link_options(face
     PRIVATE
         /NODEFAULTLIB:msvcrt
-        /NODEFAULTLIB:msvcrtd
         /NODEFAULTLIB:libcmt
 )
 endif()

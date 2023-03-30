@@ -38,7 +38,6 @@ if (WIN32)
 target_link_options(test
     PRIVATE
         /NODEFAULTLIB:msvcrt
-        /NODEFAULTLIB:msvcrtd
         /NODEFAULTLIB:libcmt
 )
 endif()

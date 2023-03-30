@@ -31,7 +31,6 @@ if (WIN32)
 target_link_options(robot
     PRIVATE
         /NODEFAULTLIB:msvcrt
-        /NODEFAULTLIB:msvcrtd
         /NODEFAULTLIB:libcmt
 )
 endif()

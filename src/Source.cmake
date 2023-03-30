@@ -35,11 +35,9 @@ target_link_libraries(execute
 
 
 if (WIN32)
-
 target_link_options(execute
     PRIVATE
         /NODEFAULTLIB:msvcrt
-        /NODEFAULTLIB:msvcrtd
         /NODEFAULTLIB:libcmt
 )
 endif()
