@@ -5,14 +5,16 @@ from falling to destruction. Any movement that would result in the robot falling
 however further valid movement commands must still be allowed.
 
 ### Inputs
+```sh
 PLACE X,Y,F
 MOVE
 LEFT
 RIGHT
 REPORT
+```
 
 ### Output
-It triggers when you report
+It is activated by using the REPORT command, which outputs the X and Y coordinates as well as the direction the robot is facing.
 
 ### Constraints
 The toy robot must not fall off the table during movement. This also includes the initial placement of the toy robot. Any move that would cause the robot to fall must be ignored.
