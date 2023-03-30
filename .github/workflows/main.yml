@@ -24,6 +24,6 @@ jobs:
       - uses: ilammy/msvc-dev-cmd@v1
       - name: Configure
         run: |
-          cmake -B build -G "MinGW Makefiles"
+          cmake -B build -G "NMake Makefiles"
           cd build
-          make
+          nmake
