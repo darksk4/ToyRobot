@@ -22,3 +22,8 @@ target_compile_options(robot
         -Wall
         -Werror
 )
+
+target_link_libraries(robot
+    PRIVATE
+        face
+)
