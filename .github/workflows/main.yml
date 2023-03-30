@@ -19,6 +19,6 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Configure
-        run: cmake -B build ; cd D:/a/ToyRobot/ToyRobot/build ; make -j40
+        run: cmake -B build ; cd build ; make -j40
       - name: Test
         run: D:/a/ToyRobot/ToyRobot/build/test   
