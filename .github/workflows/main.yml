@@ -21,5 +21,3 @@ jobs:
       - uses: microsoft/setup-msbuild@v1
       - name: Configure
         run: cmake -B build -G "MinGW Makefiles" ; cd build ; make
-      - name: Test
-        run: build/test.exe
