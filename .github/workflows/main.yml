@@ -19,6 +19,6 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Configure
-        run: cmake -B build ; cd build ; dir
+        run: cmake -B build ; cd build ; MSBuild /nologo /t:ALL_BUILD:Build ToyRobot.sln
       - name: Test
         run: D:/a/ToyRobot/ToyRobot/build/test   
