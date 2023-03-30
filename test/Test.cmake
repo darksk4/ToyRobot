@@ -30,7 +30,7 @@ target_link_libraries(test
 target_compile_options(test
     PRIVATE
         -fPIC
-        -std=c++11
+        -std=c++14
         -g
         -Wall
         -Werror

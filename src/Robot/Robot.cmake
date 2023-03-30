@@ -17,7 +17,7 @@ target_include_directories(robot
 
 target_compile_options(robot
     PRIVATE
-        -std=c++11
+        -std=c++14
         -g
         -Wall
         -Werror
