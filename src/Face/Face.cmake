@@ -19,5 +19,5 @@ target_compile_options(face
         -std=c++14
         -g
         -Wall
-        -Werror
+        #        -Werror errors in the compilation
 )

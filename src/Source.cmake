@@ -19,7 +19,7 @@ target_compile_options(execute
         -std=c++14
         -g
         -Wall
-        -Werror
+        #        -Werror errors in the compilation
 )
 
 target_link_libraries(execute

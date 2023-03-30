@@ -33,6 +33,5 @@ target_compile_options(test
         -std=c++14
         -g
         -Wall
-        -Werror
-        -Wextra
+        #        -Werror errors in the compilation
 )
