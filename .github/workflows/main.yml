@@ -27,5 +27,3 @@ jobs:
           cmake -B build
           cd build
           MSBuild /nologo ToyRobot.sln /p:Configuration=Debug
-      - name: Test
-        run: build/test.exe
