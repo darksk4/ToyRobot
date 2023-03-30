@@ -26,4 +26,6 @@ jobs:
         run: |
           cmake -B build
           cd build
-          MSBuild /nologo /t:ALL_BUILD:Build ToyRobot.sln
+          MSBuild /nologo ToyRobot.sln
+      - name: Test
+        run: build/test.exe
