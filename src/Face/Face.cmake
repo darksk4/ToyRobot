@@ -5,7 +5,7 @@ file(GLOB faceSource
 )
 
 add_library(face
-    SHARED
+    STATIC
         ${faceSource}
 )
 

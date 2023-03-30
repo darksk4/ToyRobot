@@ -5,7 +5,7 @@ file(GLOB robotSource
 )
 
 add_library(robot
-    SHARED
+    STATIC
         ${robotSource}
 )
 
